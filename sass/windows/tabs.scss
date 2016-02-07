@@ -1,0 +1,74 @@
+// Tabs
+
+.tab-group {
+  display: flex;
+  background: #f2f2f2;
+}
+
+.tab-item {
+  position: relative;
+  min-height: 48px;
+  line-height: 40px;
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+  color: #69697e;
+  border-bottom: 2px solid transparent;
+
+  &:first-child {
+    border-left: 0;
+  }
+
+  &.active {
+    color: #0078d6;
+    border-bottom: 2px solid #0078d6;
+  }
+
+  .icon-close-tab {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #666;
+    opacity: 0;
+    transition: opacity .1s linear, background-color .1s linear;
+    border-radius: 3px;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(0,0,0,.08);
+    opacity: 0;
+    transition: opacity .1s linear;
+    z-index: 1;
+  }
+
+  // Okay, I know... this is nuts but...
+  &:hover:not(.active):after {
+    opacity: 1;
+  }
+
+  &:hover .icon-close-tab {
+    opacity: 1;
+  }
+
+  .icon-close-tab:hover {
+    background-color: rgba(0,0,0,.08);
+  }
+}
+
+.tab-item-fixed {
+  flex: none;
+  padding: 3px 10px;
+}

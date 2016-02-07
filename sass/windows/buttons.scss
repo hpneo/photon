@@ -1,0 +1,128 @@
+//
+// Buttons.css
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  min-width: 120px;
+  min-height: 32px;
+  margin-bottom: 0;
+  font-size: $font-size-default;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: default;
+  background-image: none;
+  border: none;
+  -webkit-app-region: no-drag;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &[disabled] {
+    color: #848484;
+    background: #cccccc;
+  }
+}
+
+.btn-mini {
+  padding: 2px 6px;
+}
+
+.btn-large {
+  padding: 6px 12px;
+}
+
+.btn-form {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+// Normal buttons
+.btn-default {
+  color: #000000;
+  border: none;
+  background: #c2c2c2;
+
+  &:active {
+    background: #0078d7;
+    color: #ffffff;
+
+    .icon {
+      color: #ffffff;
+    }
+  }
+}
+
+// Button variations
+.btn-primary,
+.btn-positive,
+.btn-negative,
+.btn-warning {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+// For primary buttons
+.btn-primary {
+  background: #0063b1;
+
+  &:active {
+    background: #0078d7;
+  }
+}
+
+// For positive buttons
+.btn-positive {
+  background: #498205;
+
+  &:active {
+    background: #107c10;
+  }
+}
+
+// For negative actions
+.btn-negative {
+  background: #ff4343;
+
+  &:active {
+    background: #d13438;
+  }
+}
+
+// For warning actions
+.btn-warning {
+  background: #ffb900;
+
+  &:active {
+    background: #ff8c00;
+  }
+}
+
+// Icons in buttons
+.btn .icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: #393939;
+  font-size: 20px;
+  line-height: 1;
+  vertical-align: bottom;
+}
+
+// Add the margin next to the icon if there is text in the button too
+.btn .icon-text {
+  margin-right: 5px;
+}
+
+// This utility class add a down arrow icon to the button
+.btn-dropdown:after {
+  font-family: "photon-entypo";
+  margin-left: 5px;
+  content: '\e873'
+}

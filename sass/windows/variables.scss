@@ -1,0 +1,67 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Type
+// --------------------------------------------------
+
+// Try to use the system's font on whatever platform the user is on.
+$font-family-default: system, "Segoe UI", sans-serif !default;
+$font-size-default: 15px !default;
+$font-size-caption: 12px !default;
+$font-weight: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-semilight: 300 !default;
+$font-weight-light: 200 !default;
+$line-height-default: 1.6 !default;
+
+// Colors
+// --------------------------------------------------
+
+// Main colors
+$primary-color: #3b99fc !default;
+$chrome-color:  #fff !default;
+
+// Copy
+$gray-color: #333 !default;
+
+// Borders
+$border-color: #ddd !default;
+$dark-border-color: #cbcbcb !default;
+$darker-bottom-border-color: #a19fa1 !default;
+$toolbar-border-color: #939293 !default;
+$input-border-color: #999999 !default;
+
+// Action colors
+$default-color:  #fff !default;
+$positive-color: #34c84a !default;
+$negative-color: #fc605b !default;
+$warning-color: #fdbc40 !default;
+
+// Shades
+$dark-color: #57acf5 !default;
+
+// Focus and active colors
+$hover-color: rgba(0, 0, 0, 0.1);
+$active-color: rgba(0, 0, 0, 0.2);
+$focus-input-color: #3076ba !default;
+
+// Other
+// --------------------------------------------------
+
+// Border radius
+$default-border-radius: 0;
+
+// Padding
+$padding: 10px;
+$padding-mini: 3px;
+$padding-less: 5px;
+$padding-more: 20px;
+
+// Toolbars
+$toolbar-background-color: #c8c8c8;
+$toolbar-actions-background-color: #f2f2f2;
+
+// Buttons
+$button-active-color: rgba(4, 13, 20, 0.18);

@@ -1,0 +1,122 @@
+//
+// Forms.css
+// Adapted from Bootstrap's forms.less (https://github.com/twbs/bootstrap/blob/master/less/forms.less)
+// --------------------------------------------------
+
+form {
+  padding: 32px;
+}
+
+label {
+  display: inline-block;
+  font-size: $font-size-default;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 20px;
+  line-height: 24px;
+}
+
+input:checked {
+  outline: none;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+.form-control {
+  display: inline-block;
+  width: 100%;
+  min-height: 32px;
+  padding: 2px $padding;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  background-color: $chrome-color;
+  border: 2px solid $input-border-color;
+  border-radius: $default-border-radius;
+  outline: none;
+  -webkit-app-region: no-drag;
+
+  &:focus {
+    border-color: $focus-input-color;
+  }
+}
+
+// Reset height for `textarea`s
+textarea {
+  height: auto;
+}
+
+select {
+  -webkit-appearance: none;
+  background: url('../images/windows/select-arrow.png') no-repeat calc(100% - 10px) center;
+}
+
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  label {
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+}
+
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  margin: 0;
+  line-height: normal;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: url('../images/windows/toggles.png') no-repeat;
+  outline: none;
+  vertical-align: middle;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"], {
+  background-position: 0 -20px;
+
+  &:checked {
+    background-position: -20px -20px;
+  }
+}
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  background-position: 0 0;
+
+  &:checked {
+    background-position: -20px 0;
+  }
+}
+
+// Form actions
+.form-actions .btn {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

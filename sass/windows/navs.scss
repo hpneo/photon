@@ -1,0 +1,51 @@
+//
+// Navs.scss
+// --------------------------------------------------
+
+.nav-group {
+  font-size: 15px;
+  font-weight: $font-weight-semibold;
+}
+
+.nav-group-item {
+  padding: 0 10px 0 15px;
+  min-height: 48px;
+  line-height: 48px;
+  display: block;
+  color: $gray-color;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:active,
+  &.active {
+    background-color: $active-color;
+  }
+
+  .icon {
+    width: 19px; // Prevents a one pixel cutoff
+    height: 18px;
+    color: #000000;
+    margin-top: -3px;
+    margin-right: 7px;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.nav-group-title {
+  min-height: 48px;
+  line-height: 48px;
+  margin: 0;
+  padding: 0 10px 0 15px;
+  font-size: 15px;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  color: #000000;
+}

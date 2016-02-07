@@ -43,9 +43,17 @@ module.exports = function(grunt) {
         style: 'expanded',
         unixNewlines: true
       },
-      core: {
-        src: 'sass/photon.scss',
-        dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+      dist: {
+        files: [
+          {
+            src: 'sass/photon.scss',
+            dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+          },
+          {
+            src: 'sass/windows/photon.scss',
+            dest: '<%= meta.distPath %>css/<%= pkg.name %>-windows.css'
+          }
+        ]
       },
       docs: {
         src: 'sass/docs.scss',
@@ -71,6 +79,11 @@ module.exports = function(grunt) {
       fonts: {
         expand: true,
         src: 'fonts/*',
+        dest: '<%= meta.distPath %>'
+      },
+      images: {
+        expand: true,
+        src: 'images/**/*',
         dest: '<%= meta.distPath %>'
       },
       docs: {
