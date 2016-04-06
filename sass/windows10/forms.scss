@@ -26,17 +26,8 @@ input[type="search"] {
 }
 
 .form-control {
-  display: inline-block;
-  width: 100%;
-  min-height: 32px;
-  padding: 2px $padding;
-  font-size: $font-size-default;
-  line-height: $line-height-default;
-  background-color: $chrome-color;
-  border: 2px solid $input-border-color;
+  border: $border-width solid $border-color;
   border-radius: $default-border-radius;
-  outline: none;
-  -webkit-app-region: no-drag;
 
   &:focus {
     border-color: $focus-input-color;
@@ -50,7 +41,7 @@ textarea {
 
 select {
   -webkit-appearance: none;
-  background: url('../images/windows/select-arrow.png') no-repeat calc(100% - 10px) center;
+  background: url('../images/windows10/select-arrow.png') no-repeat calc(100% - 10px) center;
 }
 
 // Form groups
@@ -74,8 +65,7 @@ select {
   margin-bottom: 10px;
 
   label {
-    margin-bottom: 0;
-    font-weight: normal;
+    padding-left: 25px;
   }
 }
 
@@ -89,9 +79,10 @@ select {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  background: url('../images/windows/toggles.png') no-repeat;
+  background: url('../images/windows10/toggles.png') no-repeat;
   outline: none;
   vertical-align: middle;
+  left: 0;
 }
 
 .radio input[type="radio"],

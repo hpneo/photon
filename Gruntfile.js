@@ -43,17 +43,17 @@ module.exports = function(grunt) {
         style: 'expanded',
         unixNewlines: true
       },
-      dist: {
-        files: [
-          {
-            src: 'sass/photon.scss',
-            dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
-          },
-          {
-            src: 'sass/windows/photon.scss',
-            dest: '<%= meta.distPath %>css/<%= pkg.name %>-windows.css'
-          }
-        ]
+      core: {
+        src: 'sass/photon.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+      },
+      osx: {
+        src: 'sass/theme-osx.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>-theme-osx.css'
+      },
+      windows10: {
+        src: 'sass/theme-windows10.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>-theme-windows10.css'
       },
       docs: {
         src: 'sass/docs.scss',
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
     copy: {
       fonts: {
         expand: true,
-        src: 'fonts/*',
+        src: 'fonts/**/*',
         dest: '<%= meta.distPath %>'
       },
       images: {

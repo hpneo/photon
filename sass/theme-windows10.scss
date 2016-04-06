@@ -1,0 +1,21 @@
+// Variables
+@import "windows10/variables.scss";
+
+// Mixins
+@import "mixins.scss";
+
+// Normalize, Base, & Utilities CSS
+@import "windows10/utilities.scss";
+
+// Components
+@import "windows10/buttons.scss";
+@import "windows10/button-groups.scss";
+@import "windows10/bars.scss";
+@import "windows10/forms.scss";
+@import "windows10/grid.scss";
+@import "windows10/images.scss";
+@import "windows10/lists.scss";
+@import "windows10/navs.scss";
+@import "windows10/icons.scss";
+@import "windows10/tables.scss";
+@import "windows10/tabs.scss";
