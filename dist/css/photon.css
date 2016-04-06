@@ -123,8 +123,24 @@ th {
 
 * {
   cursor: default;
-  -webkit-user-drag: text;
   -webkit-user-select: none;
+}
+
+input,
+textarea {
+  -webkit-user-select: text;
+}
+
+form,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-user-select: text;
+  -webkit-app-region: no-drag;
+}
+
+* {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -452,7 +468,7 @@ h6 {
 .btn-dropdown:after {
   font-family: "photon-entypo";
   margin-left: 5px;
-  content: "";
+  content: '\e873';
 }
 
 .btn-group {
@@ -598,11 +614,10 @@ input[type="checkbox"] {
   border: 1px solid #ddd;
   border-radius: 4px;
   outline: none;
-  -webkit-app-region: no-drag;
 }
 .form-control:focus {
   border-color: #6db3fd;
-  box-shadow: 3px 3px 0 #6db3fd, -3px -3px 0 #6db3fd, -3px 3px 0 #6db3fd, 3px -3px 0 #6db3fd;
+  box-shadow: 0 0 0 3px #6db3fd;
 }
 
 textarea {
