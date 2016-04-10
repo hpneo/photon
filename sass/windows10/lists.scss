@@ -6,31 +6,12 @@
 // These are to be used when shows list items that contain
 // more substanstial amounts of information. (headings, images, text, etc.)
 
-.list-group {
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-
-  * {
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
 .list-group-item {
   padding: 10px 12px;
   font-size: $font-size-default;
   line-height: 1.2;
   color: #414142;
   border-top: 1px solid $border-color;
-
-  &:first-child {
-    border-top: 0;
-  }
 
   &.active,
   // `.selected` is deprecated. Use `.active` instead.
@@ -48,17 +29,7 @@
   margin-top: 0;
 }
 
-.media-object.pull-left {
-  margin-right: 10px
-}
-
-.media-object.pull-right {
-  margin-left: 10px
-}
-
 .media-body {
-  overflow: hidden;
-
   strong {
     font-weight: $font-weight-semibold;
   }

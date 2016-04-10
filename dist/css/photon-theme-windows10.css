@@ -95,7 +95,7 @@
 
 .btn-default {
   color: #000000;
-  border-color: #c2c2c2;
+  background: #c1c1c1;
 }
 .btn-default:active {
   background: #0078d7;
@@ -106,39 +106,39 @@
 }
 
 .btn-primary {
-  border-color: #0063b1;
-  color: #0063b1;
+  background: #0063b1;
+  color: #ffffff;
 }
 .btn-primary:active {
   background: #0078d7;
 }
 
 .btn-positive {
-  border-color: #498205;
-  color: #498205;
+  background: #498205;
+  color: #ffffff;
 }
 .btn-positive:active {
   background: #107c10;
 }
 
 .btn-negative {
-  border-color: #ff4343;
-  color: #ff4343;
+  background: #ff4343;
+  color: #ffffff;
 }
 .btn-negative:active {
   background: #d13438;
 }
 
 .btn-warning {
-  border-color: #ffb900;
-  color: #ffb900;
+  background: #ffb900;
+  color: #ffffff;
 }
 .btn-warning:active {
   background: #ff8c00;
 }
 
 .btn-link {
-  border-color: transparent;
+  background: transparent;
 }
 
 .btn .icon {
@@ -151,35 +151,23 @@
   font-size: 20px;
   line-height: 1;
   vertical-align: bottom;
+  float: none;
 }
 
 .btn-dropdown {
-  background: url("../images/windows10/select-arrow.png") no-repeat calc(100% - 10px) center !important;
+  background: url("../images/windows10/select-arrow.png") no-repeat calc(100% - 2px) center !important;
 }
 
 .btn-dropdown:after {
   content: none;
 }
 
-.btn-group {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-app-region: no-drag;
-}
-.btn-group .btn {
-  position: relative;
-  float: left;
-}
-.btn-group .btn:focus, .btn-group .btn:active {
-  z-index: 2;
+.btn-group .btn .icon {
+  text-align: center;
 }
 .btn-group .btn:active, .btn-group .btn.active {
   z-index: 3;
-  background: rgba(4, 13, 20, 0.18);
-}
-.btn-group .btn:active .icon, .btn-group .btn.active .icon {
-  color: #ffffff;
+  background: #c9c9c9;
 }
 
 .btn-group > .btn:first-child {
@@ -200,26 +188,14 @@
   border-left: 0;
 }
 .btn-group .active {
-  color: #fff;
   border: 1px solid transparent;
   background-color: #6d6c6d;
   background-image: none;
 }
-.btn-group .active .icon {
-  color: #fff;
-}
-
-.toolbar {
-  box-shadow: inset 0 1px 0 #f5f4f5;
-  background-color: #e8e6e8;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e6e8), color-stop(100%, #d1cfd1));
-  background-image: -webkit-linear-gradient(top, #e8e6e8 0%, #d1cfd1 100%);
-  background-image: linear-gradient(to bottom, #e8e6e8 0%, #d1cfd1 100%);
-}
 
 .toolbar-header {
   border-bottom: 1px solid #cbcbcb;
-  background: #c8c8c8;
+  background: #e6e6e6;
   min-height: 32px;
   line-height: 32px;
 }
@@ -248,7 +224,7 @@
   padding-right: 3px;
   padding-left: 3px;
   padding-bottom: 0;
-  background: #f2f2f2;
+  background: #e6e6e6;
   height: 48px;
 }
 .toolbar-actions .btn {
@@ -259,10 +235,11 @@
   background: none;
 }
 .toolbar-actions .btn:active, .toolbar-actions .btn.active {
-  background: rgba(4, 13, 20, 0.18);
+  background: #c9c9c9;
+  color: #393939;
 }
 .toolbar-actions .btn:active .icon, .toolbar-actions .btn.active .icon {
-  color: #ffffff;
+  color: #393939;
 }
 .toolbar-actions .btn,
 .toolbar-actions .btn-group {
@@ -320,9 +297,13 @@ select {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.radio label,
+
 .checkbox label {
   padding-left: 25px;
+}
+
+.radio label {
+  padding-left: 0;
 }
 
 .radio input[type="radio"],
@@ -332,21 +313,42 @@ select {
   margin: 0;
   line-height: normal;
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  background: url("../images/windows10/toggles.png") no-repeat;
   outline: none;
   vertical-align: middle;
   left: 0;
 }
 
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background: url("../images/windows10/toggles.png") no-repeat;
+}
+
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
-  background-position: 0 -20px;
+  background: #2077d4;
+  border-radius: 20px;
+  width: 45px;
+  height: 20px;
+  position: relative;
 }
-.radio input[type="radio"]:checked,
-.radio-inline input[type="radio"]:checked {
-  background-position: -20px -20px;
+.radio input[type="radio"]:after,
+.radio-inline input[type="radio"]:after {
+  position: absolute;
+  content: "";
+  background: white;
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 100%;
+  left: 4px;
+  top: 4px;
+}
+.radio input[type="radio"]:checked::after,
+.radio-inline input[type="radio"]:checked::after {
+  left: initial;
+  right: 4px;
 }
 
 .checkbox input[type="checkbox"],
@@ -404,40 +406,12 @@ select {
   flex: none;
 }
 
-img {
-  -webkit-user-drag: text;
-}
-
-.img-circle {
-  border-radius: 50%;
-}
-
-.img-rounded {
-  border-radius: 0;
-}
-
-.list-group {
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.list-group * {
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .list-group-item {
   padding: 10px 12px;
   font-size: 15px;
   line-height: 1.2;
   color: #414142;
   border-top: 1px solid #ddd;
-}
-.list-group-item:first-child {
-  border-top: 0;
 }
 .list-group-item.active, .list-group-item.selected {
   background-color: rgba(0, 0, 0, 0.2);
@@ -451,17 +425,6 @@ img {
   margin-top: 0;
 }
 
-.media-object.pull-left {
-  margin-right: 10px;
-}
-
-.media-object.pull-right {
-  margin-left: 10px;
-}
-
-.media-body {
-  overflow: hidden;
-}
 .media-body strong {
   font-weight: 600;
 }
@@ -792,23 +755,22 @@ td:last-child {
 
 .tab-group {
   display: flex;
-  background: #f2f2f2;
+  background: #e6e6e6;
 }
 
 .tab-item {
-  position: relative;
   min-height: 48px;
   line-height: 40px;
-  flex: 1;
-  font-size: 12px;
-  text-align: center;
   color: #69697e;
   border-bottom: 2px solid transparent;
+  border-left: none;
+  background: transparent;
 }
 .tab-item:first-child {
   border-left: 0;
 }
 .tab-item.active {
+  background: transparent;
   color: #0078d6;
   border-bottom: 2px solid #0078d6;
 }

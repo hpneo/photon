@@ -2,11 +2,6 @@
 // Bars.css
 // --------------------------------------------------
 
-.toolbar {
-  box-shadow: inset 0 1px 0 #f5f4f5;
-  @include linear-gradient(#e8e6e8, #d1cfd1);
-}
-
 .toolbar-header {
   border-bottom: 1px solid $dark-border-color;
   background: $toolbar-background-color;
@@ -54,9 +49,10 @@
 
     &:active, &.active {
       background: $button-active-color;
+      color: #393939;
 
       .icon {
-        color: #ffffff;
+        color: #393939;
       }
     }
   }

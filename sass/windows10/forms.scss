@@ -63,12 +63,19 @@ select {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+}
 
+.checkbox {
   label {
     padding-left: 25px;
   }
 }
 
+.radio {
+  label {
+    padding-left: 0;
+  }
+}
 
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
@@ -77,20 +84,41 @@ select {
   margin: 0;
   line-height: normal;
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  background: url('../images/windows10/toggles.png') no-repeat;
   outline: none;
   vertical-align: middle;
   left: 0;
 }
 
-.radio input[type="radio"],
-.radio-inline input[type="radio"], {
-  background-position: 0 -20px;
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background: url('../images/windows10/toggles.png') no-repeat;
+}
 
-  &:checked {
-    background-position: -20px -20px;
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+  background: #2077d4;
+  border-radius: 20px;
+  width: 45px;
+  height: 20px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    background: white;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 100%;
+    left: 4px;
+    top: 4px;
+  }
+
+  &:checked::after {
+    left: initial;
+    right: 4px;
   }
 }
 

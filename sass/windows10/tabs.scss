@@ -2,24 +2,23 @@
 
 .tab-group {
   display: flex;
-  background: #f2f2f2;
+  background: #e6e6e6;
 }
 
 .tab-item {
-  position: relative;
   min-height: 48px;
   line-height: 40px;
-  flex: 1;
-  font-size: 12px;
-  text-align: center;
   color: #69697e;
   border-bottom: 2px solid transparent;
+  border-left: none;
+  background: transparent;
 
   &:first-child {
     border-left: 0;
   }
 
   &.active {
+    background: transparent;
     color: #0078d6;
     border-bottom: 2px solid #0078d6;
   }

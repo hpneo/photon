@@ -21,7 +21,7 @@
 // Normal buttons
 .btn-default {
   color: #000000;
-  border-color: #c2c2c2;
+  background: #c1c1c1;
 
   &:active {
     background: #0078d7;
@@ -35,8 +35,8 @@
 
 // For primary buttons
 .btn-primary {
-  border-color: #0063b1;
-  color: #0063b1;
+  background: #0063b1;
+  color: #ffffff;
 
   &:active {
     background: #0078d7;
@@ -45,8 +45,8 @@
 
 // For positive buttons
 .btn-positive {
-  border-color: #498205;
-  color: #498205;
+  background: #498205;
+  color: #ffffff;
 
   &:active {
     background: #107c10;
@@ -55,8 +55,8 @@
 
 // For negative actions
 .btn-negative {
-  border-color: #ff4343;
-  color: #ff4343;
+  background: #ff4343;
+  color: #ffffff;
 
   &:active {
     background: #d13438;
@@ -65,8 +65,8 @@
 
 // For warning actions
 .btn-warning {
-  border-color: #ffb900;
-  color: #ffb900;
+  background: #ffb900;
+  color: #ffffff;
 
   &:active {
     background: #ff8c00;
@@ -75,7 +75,7 @@
 
 // Link buttons
 .btn-link {
-  border-color: transparent;
+  background: transparent;
 }
 
 // Icons in buttons
@@ -89,11 +89,12 @@
   font-size: 20px;
   line-height: 1;
   vertical-align: bottom;
+  float: none;
 }
 
 // This utility class add a down arrow icon to the button
 .btn-dropdown {
-  background: url('../images/windows10/select-arrow.png') no-repeat calc(100% - 10px) center !important;
+  background: url('../images/windows10/select-arrow.png') no-repeat calc(100% - 2px) center !important;
 }
 
 .btn-dropdown:after {
